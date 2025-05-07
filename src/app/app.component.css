@@ -1,3 +1,45 @@
-.titulo{
+:root{
+    --cinza-claro: #f4f4f4;
+}
+
+.titulo {
     text-align: center;
+}
+
+.conteudo {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+di
+.div-cards {
+    width: 78%;
+}
+
+.div-menu-lateral {
+    width: 20%;
+}
+
+.div-menu-lateral > p {
+    border-bottom: solid #ededed;
+    color: #b7b4b4;
+}
+
+.div-menu-lateral > p:first-child, 
+.div-menu-lateral > p:last-of-type{
+    font-weight: bold;
+    border: none;
+    color: #333333;
+}
+
+.div-menu-lateral > p:last-of-type{
+    padding-top: 3rem;
+}
+
+input{
+    width: 98%;
+    height: 2rem;
+    border-radius: 5px;
+    border: solid #ededed;
 }
