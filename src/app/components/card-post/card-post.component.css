@@ -1,23 +1,10 @@
-/* img{
+img{
     width: 20rem;
     height: 20rem;
-} */
-
-
-
-.div-menu-lateral {
-    width: 20%;
 }
 
 
 
-.div-menu-lateral > p:last-of-type{
-    padding-top: 3rem;
-}
 
-input{
-    width: 98%;
-    height: 2rem;
-    border-radius: 5px;
-    border: solid #ededed;
-}
+
+

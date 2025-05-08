@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { Postagem } from '../../model/postagem.model';
 import { PostagemService } from '../../services/postagem.service';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-card-post',
   standalone: true,
-  imports: [],
+  imports: [RouterModule ],
   templateUrl: './card-post.component.html',
   styleUrl: './card-post.component.css',
 })
@@ -16,7 +17,7 @@ export class CardPostComponent implements OnInit {
 
   ngOnInit(): void {
     this.servicePostagem.getPostagens().subscribe((response) => {
-      this.postagems = response.dados;
+      this.postagems = response;
       // console.log(response)
     });
   }

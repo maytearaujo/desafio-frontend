@@ -6,24 +6,24 @@
 <div>
   <!-- <button [routerLink]="['/cadastro']" routerLinkActive="router-link-active">Nova Postagem</button> -->
   <div class="container">
-    @if(postagems.length > 0){
-    @for (postagem of postagems; track $index) {
-    <div class="card">
-      <img width="320" height="320" src="{{ postagem.id }}" alt="Imagem {{ postagem.title }}">
-      <p class="titulo">{{ postagem.title }}</p>
-      <p class="corpo"> {{ postagem.body }}</p>
-      <div class="botoes">
-        <button>Editar</button>
-        <button>Detalhes</button>
-        <button (click)="deletar(postagem.id!)">Exluir</button>
-      </div>
-    </div>
+    <h3>Postagens carregadas: {{ postagems.length }}</h3>
 
-    }
+    @if (postagems.length > 0) {
+      @for (postagem of postagems; track $index) {
+        <div class="card">
+          <img width="320" height="320" src="{{ postagem.image }}" alt="Imagem {{ postagem.title }}">
+          <p class="titulo">{{ postagem.title }}</p>
+          <p class="corpo"> {{ postagem.body }}</p>
+          <div class="botoes">
+            <button>Editar</button>
+            <button>Detalhes</button>
+            <button (click)="deletar(postagem.id!)">Excluir</button>
+          </div>
+        </div>
+
+      }
     }@else {
       <p>Dados não foram cadastrados</p>
     }
-
-
   </div>
 </div>

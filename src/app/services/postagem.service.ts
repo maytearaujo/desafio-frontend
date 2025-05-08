@@ -16,11 +16,14 @@ export class PostagemService {
   }
 
 
-  getPostagens() : Observable<Response<Postagem[]>> {
-    return this.http.get<Response<Postagem[]>>(this.url);
+  // getPostagens() : Observable<Response<Postagem[]>> {
+  //   return this.http.get<Response<Postagem[]>>(this.url);
+  // }
+
+  getPostagens(): Observable<Postagem[]> {
+    return this.http.get<Postagem[]>(this.url);
   }
-
-
+  
   // //Está funcionando
   // getPostagens() {
   //   return this.http.get<Postagem[]>(this.url);
