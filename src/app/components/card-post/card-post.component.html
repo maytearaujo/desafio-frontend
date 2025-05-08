@@ -8,7 +8,7 @@
       </div>
     @for (postagem of postagems; track $index) {
     <div class="card">
-      <img width="320" height="320" src="{{ postagem.image }}" alt="Imagem {{ postagem.title }}">
+      <img width="320" height="320" [src]="postagem.image" alt="Imagem {{ postagem.title }}">
       <p class="titulo">{{ postagem.title }}</p>
       <p class="corpo"> {{ postagem.body }}</p>
       <div class="botoes">

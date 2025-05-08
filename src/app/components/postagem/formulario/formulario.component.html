@@ -1,0 +1,25 @@
+<div class="container">
+    <h1>Cadastro da Postagem</h1>
+    <form [formGroup]="postagemForm" (ngSubmit)="submit()" #formDir="ngForm">
+        <div class="form-group">
+            <label for="title">Título: </label>
+            <input type="text" name="title" placeholder="Insira o título da sua postagem" formControlName="title">
+        </div>
+
+        <div class="form-group">
+            <label for="body">Insira a sua postagem: </label>
+            <textarea name="body" id="" placeholder="Insira a sua postagem" formControlName="body"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="image">Imagem: </label>
+            <input type="text" name="image" placeholder="Insira o endereço da imagem" formControlName="image">
+        </div>
+
+        <div class="form-actions">
+            <button type="submit">Cadastrar</button>
+            <a [routerLink]="['/']" class="voltar">Voltar</a>
+        </div>
+
+    </form>
+</div>
