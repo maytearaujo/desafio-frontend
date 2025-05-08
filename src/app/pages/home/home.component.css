@@ -1,0 +1,13 @@
+.titulo {
+    text-align: center;
+}
+
+.conteudo {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+.div-cards {
+    width: 78%;
+}

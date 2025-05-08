@@ -1,0 +1,22 @@
+.div-categorias > p {
+    border-bottom: solid #ededed;
+    color: #b7b4b4;
+}
+
+.div-categorias > p:first-child, 
+.div-categorias > p:last-of-type{
+    font-weight: bold;
+    border: none;
+    color: #333333;
+}
+
+.div-categorias > p:last-of-type{
+    padding-top: 3rem;
+}
+
+input{
+    width: 98%;
+    height: 2rem;
+    border-radius: 5px;
+    border: solid #ededed;
+}
