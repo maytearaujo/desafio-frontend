@@ -1,3 +1,29 @@
-<img src="https://blog.emania.com.br/wp-content/uploads/2016/02/1576879894-1200x675.jpg" alt="Imagem title">
+<!-- <img src="https://blog.emania.com.br/wp-content/uploads/2016/02/1576879894-1200x675.jpg" alt="Imagem title">
 <h2>title</h2>
-<p>body</p>
+<p>body</p> -->
+
+<h1>Lista de Posts</h1>
+<div>
+  <!-- <button [routerLink]="['/cadastro']" routerLinkActive="router-link-active">Nova Postagem</button> -->
+  <div class="container">
+    @if(postagems.length > 0){
+    @for (postagem of postagems; track $index) {
+    <div class="card">
+      <img width="320" height="320" src="{{ postagem.id }}" alt="Imagem {{ postagem.title }}">
+      <p class="titulo">{{ postagem.title }}</p>
+      <p class="corpo"> {{ postagem.body }}</p>
+      <div class="botoes">
+        <button>Editar</button>
+        <button>Detalhes</button>
+        <button (click)="deletar(postagem.id!)">Exluir</button>
+      </div>
+    </div>
+
+    }
+    }@else {
+      <p>Dados não foram cadastrados</p>
+    }
+
+
+  </div>
+</div>
