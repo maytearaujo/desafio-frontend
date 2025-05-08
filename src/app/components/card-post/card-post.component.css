@@ -1,10 +1,22 @@
-img{
+/* img{
     width: 20rem;
     height: 20rem;
+} */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2rem
 }
 
+.card {
+    width: 30rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-
-
-
-
+.titulo {
+    width: 100%;
+    text-align: center;
+}
