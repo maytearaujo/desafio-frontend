@@ -4,35 +4,42 @@
     <h1>Exibindo resultado de busca por "Covid 19"</h1>
     <p>Encontramos um total de {{ postagems.length }} resultados para sua busca</p>
   </div>
-  <!-- <div class="lista-cards"> -->
-    @for (postagem of postagems; track $index) {
-    <div class="card">
-      <img [src]="postagem.image" alt="Imagem {{ postagem.title }}">
-      <div class="textos-post">
-        <div class="titulo-post">{{ postagem.title }}</div>
-        <!-- <div class="corpo-post"> {{ postagem.body }}</div> FUNCIONANDO CORRETAMENTE -->
-        <!-- <div class="corpo-post">  -->
-          <app-maismenos
-          [text]=postagem.body
-          [wordLimit]="150"
-          [id]=postagem.id!
-          ></app-maismenos>
-          
-          
-        <!-- </div> -->
-      </div>
-      <!-- <div class="lerMais"> -->
-      <!-- <a [routerLink]="['/detalhes', postagem.id]" class="lerMais">Ler Mais</a> -->
+  <div class="cards-menu">
+    <div class="cards-btnVerMais">
+      <div class="cards">
+        <!-- @for (postagem of postagems; track $index) { -->
+        @for (postagem of postagemsFiltrados; track $index) {
+        <div class="card">
+          <img [src]="postagem.image" alt="Foto da Notícia">
+          <div class="textos-post">
+            <div class="titulo-post">{{ postagem.title }}</div>
+            <!-- <div class="corpo-post"> {{ postagem.body }}</div> FUNCIONANDO CORRETAMENTE -->
+            <!-- <div class="corpo-post">  -->
+            <app-maismenos [text]=postagem.body [wordLimit]="80" [id]=postagem.id!></app-maismenos>
 
-      <div class="botoes">
-        <button>Editar</button>
-        <!-- <button [routerLink]="['/detalhes', postagem.id]">Detalhes</button> -->
-        <button (click)="deletar(postagem.id!)">Excluir</button>
+
+            <!-- </div> -->
+          </div>
+          <!-- <div class="lerMais"> -->
+          <!-- <a [routerLink]="['/detalhes', postagem.id]" class="lerMais">Ler Mais</a> -->
+
+          <!-- <div class="botoes">
+            <button>Editar</button>
+            <button (click)="deletar(postagem.id!)">Excluir</button>
+          </div> -->
+        </div>
+        }
       </div>
+      @if (quantidadeExibida < postagems.length) { <div class="ver-mais-container">
+        <button (click)="verMais()" class="ver-mais">Ver mais</button>
     </div>
     }
-  <!-- </div> -->
-  }@else {
-  <p>Dados não foram cadastrados</p>
-  }
+  </div>
+
+  <app-menu-lateral class="menu-lateral"></app-menu-lateral>
+</div>
+}@else {
+<p>Dados não foram cadastrados</p>
+}
+
 </div>

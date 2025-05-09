@@ -2,14 +2,15 @@
 .conteudo-home {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    align-items: stretch;
+    justify-content: space-around;
     padding: 2rem;
 }
 
 .div-cards {
-    width: 78%;
+    /* width: 78%; */
 }
 
 .menu-lateral {
-    width: 20%;
+    /* width: 20%; */
 }

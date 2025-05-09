@@ -12,17 +12,35 @@
   text-align: center;
 }
 
-.lista-cards {
+.cards-menu{
+  border: solid purple;
+  display: flex;
+  flex-direction: row;
+}
+
+.cards-btnVerMais {
+  display: flex;
+  flex-direction: column;
+  /* flex-wrap: wrap; */
+  align-items: center;
+  gap: 1rem;
+    border: solid green;
+
+  
+}
+
+.cards {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  justify-content: space-around;
+  gap: 1rem;
 }
 
 .card {
-  width: 25rem;
+  width: 30rem;
   height: 25rem;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
   border: 1px solid #ccc;
@@ -30,6 +48,7 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 
   overflow: hidden;
+  padding-bottom: 1rem;
 }
 
 img {
@@ -49,18 +68,9 @@ img {
   text-align: center;
 }
 
-/* .corpo-post {
-  width: 100%;
-  height: 2.5rem;
-  text-align: justify;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  line-height: 1.2rem;
-} */
-
 .botoes {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .botoes button {
@@ -74,4 +84,26 @@ img {
   width: 100%;
   text-decoration: none;
   font-weight: bold;
+}
+
+.ver-mais-container {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.ver-mais {
+  padding: 0.5rem 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.ver-mais:hover {
+  background-color: #0056b3;
+}
+
+.menu-lateral{
+  width: 35%;
 }
