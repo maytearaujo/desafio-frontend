@@ -33,6 +33,10 @@ export class PostagemService {
     return this.http.post<Response<Postagem[]>>(this.url, postagem);
   }
 
+  getPostagemId(id:number) : Observable<Postagem> {
+    return this.http.get<Postagem>(`${this.url}/${id}`)
+  }
+
   editar(postagem: Postagem){
     return this.http.put<Postagem>(`${this.url}/${postagem.id}`, postagem);
   }

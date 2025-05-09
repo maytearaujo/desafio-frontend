@@ -1,0 +1,8 @@
+<div class="container">
+    <div class="card">
+        <img [src]="postagem.image" alt="Imagem {{ postagem.title }}">
+        <p class="titulo">{{ postagem.title }}</p>
+        <p class="corpo"> {{ postagem.body }} </p>
+        <a [routerLink]="['/']" class="voltar">Voltar</a>
+    </div>
+</div>
