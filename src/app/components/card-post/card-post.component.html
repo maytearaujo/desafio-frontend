@@ -36,7 +36,10 @@
     }
   </div>
 
-  <app-menu-lateral class="menu-lateral"></app-menu-lateral>
+  <!-- <app-menu-lateral (buscaChange)="search($event)" class="menu-lateral"></app-menu-lateral> -->
+  <app-menu-lateral (input)="search($event)" class="menu-lateral"></app-menu-lateral>
+
+   <!-- <input type="text" placeholder="Digite sua pesquisa" (input)="search($event)"> -->
 </div>
 }@else {
 <p>Dados não foram cadastrados</p>

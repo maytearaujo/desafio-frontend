@@ -1,9 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter } from '@angular/core';
 import { Postagem } from '../../model/postagem.model';
 import { PostagemService } from '../../services/postagem.service';
 import { RouterModule } from '@angular/router';
 import { MaismenosComponent } from '../maismenos/maismenos.component';
-import { MenuLateralComponent } from "../menu-lateral/menu-lateral.component";
+import { MenuLateralComponent } from '../menu-lateral/menu-lateral.component';
 
 @Component({
   selector: 'app-card-post',
@@ -14,21 +14,27 @@ import { MenuLateralComponent } from "../menu-lateral/menu-lateral.component";
 })
 export class CardPostComponent implements OnInit {
   postagems: Postagem[] = [];
+  postagemsGeral: Postagem[] = [];
+
+  termoBusca: string = '';
+
   quantidadeExibida: number = 4;
 
-get postagemsFiltrados() {
-  return this.postagems.slice(0, this.quantidadeExibida);
-}
+  get postagemsFiltrados() {
+    return this.postagems.slice(0, this.quantidadeExibida);
+  }
 
-verMais() {
-  this.quantidadeExibida += 4;
-}
+  verMais() {
+    this.quantidadeExibida += 4;
+  }
 
   constructor(private servicePostagem: PostagemService) {}
 
   ngOnInit(): void {
     this.servicePostagem.getPostagens().subscribe((response) => {
       this.postagems = response;
+      this.postagemsGeral = response;
+
       // console.log(response)
     });
   }
@@ -38,5 +44,18 @@ verMais() {
       window.location.reload();
       alert('Postagem excluída com sucesso!!');
     });
+  }
+
+  search(event:Event){
+    const target = event.target as HTMLInputElement;
+    const value = target.value.toLowerCase();
+
+    this.termoBusca = target.value; 
+
+    this.postagems = this.postagemsGeral.filter(postagem => {
+      return postagem.title.toLowerCase().includes(value);
+      
+    })
+
   }
 }

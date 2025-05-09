@@ -12,8 +12,7 @@
   text-align: center;
 }
 
-.cards-menu{
-  border: solid purple;
+.cards-menu {
   display: flex;
   flex-direction: row;
 }
@@ -24,9 +23,8 @@
   /* flex-wrap: wrap; */
   align-items: center;
   gap: 1rem;
-    border: solid green;
 
-  
+
 }
 
 .cards {
@@ -104,6 +102,6 @@ img {
   background-color: #0056b3;
 }
 
-.menu-lateral{
+.menu-lateral {
   width: 35%;
 }
