@@ -2,11 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { Postagem } from '../../model/postagem.model';
 import { PostagemService } from '../../services/postagem.service';
 import { RouterModule } from '@angular/router';
+import { MaismenosComponent } from '../maismenos/maismenos.component';
 
 @Component({
   selector: 'app-card-post',
   standalone: true,
-  imports: [RouterModule ],
+  imports: [RouterModule, MaismenosComponent],
   templateUrl: './card-post.component.html',
   styleUrl: './card-post.component.css',
 })

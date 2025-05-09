@@ -1,6 +1,7 @@
 
-.conteudo {
+.conteudo-home {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     padding: 2rem;
 }
@@ -9,6 +10,6 @@
     width: 78%;
 }
 
-.div-menu-lateral {
+.menu-lateral {
     width: 20%;
 }

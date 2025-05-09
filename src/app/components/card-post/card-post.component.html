@@ -1,28 +1,38 @@
-  <div class="container">
-    @if (postagems.length > 0) {
-      <div class="titulo">
-        <h1>Exibindo resultado de busca por "Covid 19"</h1>
-        <p>Encontramos um total de {{ postagems.length }} resultados para sua busca</p>
-      </div>
+<div class="conteudo-card">
+  @if (postagems.length > 0) {
+  <div class="titulo-card">
+    <h1>Exibindo resultado de busca por "Covid 19"</h1>
+    <p>Encontramos um total de {{ postagems.length }} resultados para sua busca</p>
+  </div>
+  <!-- <div class="lista-cards"> -->
     @for (postagem of postagems; track $index) {
     <div class="card">
-      <img width="320" height="320" [src]="postagem.image" alt="Imagem {{ postagem.title }}">
-      <p class="titulo">{{ postagem.title }}</p>
-      <p class="corpo"> {{ postagem.body }}</p>
+      <img [src]="postagem.image" alt="Imagem {{ postagem.title }}">
+      <div class="textos-post">
+        <div class="titulo-post">{{ postagem.title }}</div>
+        <!-- <div class="corpo-post"> {{ postagem.body }}</div> FUNCIONANDO CORRETAMENTE -->
+        <!-- <div class="corpo-post">  -->
+          <app-maismenos
+          [text]=postagem.body
+          [wordLimit]="150"
+          [id]=postagem.id!
+          ></app-maismenos>
+          
+          
+        <!-- </div> -->
+      </div>
+      <!-- <div class="lerMais"> -->
+      <!-- <a [routerLink]="['/detalhes', postagem.id]" class="lerMais">Ler Mais</a> -->
 
-<!-- <div class="lerMais"> -->
-           <a [routerLink]="['/detalhes', postagem.id]" class="lerMais">Ler Mais</a>
-
-<!-- </div>      -->
- <div class="botoes">
+      <div class="botoes">
         <button>Editar</button>
         <!-- <button [routerLink]="['/detalhes', postagem.id]">Detalhes</button> -->
         <button (click)="deletar(postagem.id!)">Excluir</button>
       </div>
     </div>
-
     }
-    }@else {
-    <p>Dados não foram cadastrados</p>
-    }
-  </div>
+  <!-- </div> -->
+  }@else {
+  <p>Dados não foram cadastrados</p>
+  }
+</div>

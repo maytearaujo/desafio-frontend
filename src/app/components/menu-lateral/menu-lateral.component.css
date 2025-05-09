@@ -10,7 +10,7 @@
     color: #333333;
 }
 
-.div-categorias > p:last-of-type{
+.div-categorias > p:last-of-type {
     padding-top: 3rem;
 }
 
@@ -18,5 +18,11 @@ input{
     width: 98%;
     height: 2rem;
     border-radius: 5px;
-    border: solid #ededed;
+}
+
+button {
+  width: 8rem;
+  height: 2rem;
+  border-radius: .5rem;
+  margin-top: 1rem;
 }
