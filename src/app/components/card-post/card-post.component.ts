@@ -4,11 +4,13 @@ import { PostagemService } from '../../services/postagem.service';
 import { RouterModule } from '@angular/router';
 import { MaismenosComponent } from '../maismenos/maismenos.component';
 import { MenuLateralComponent } from '../menu-lateral/menu-lateral.component';
+import { HomeComponent } from '../../pages/home/home.component';
+import { ErrorPageComponent } from "../../pages/error-page/error-page.component";
 
 @Component({
   selector: 'app-card-post',
   standalone: true,
-  imports: [RouterModule, MaismenosComponent, MenuLateralComponent],
+  imports: [RouterModule, MaismenosComponent, MenuLateralComponent, HomeComponent, ErrorPageComponent],
   templateUrl: './card-post.component.html',
   styleUrl: './card-post.component.css',
 })

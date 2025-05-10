@@ -54,7 +54,8 @@ h2 {
 }
 
 img {
-    width: 20rem;
+    width: max(100%);
+    height: max(20%);
     height: 20rem;
     align-items: center;
     margin: 0 auto;
