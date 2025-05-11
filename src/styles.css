@@ -8,37 +8,87 @@ root {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    text-decoration: none;
+}
 
+body {
+    width: 100%;
+    min-height: 100vh;
     background-color: #f9f9f9;
-    font-family: "Open Sans",
-        sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 html {
+    font-family: "Open Sans",
+        sans-serif;
     font-size: 16px;
+    /* color: #333333; */
+    letter-spacing: .03em;
+    word-spacing: .1em;
+
 }
 
-
-
 h1 {
-    font-size: 1.5rem;
+
+    font-size: 5.333vw;
 }
 
 h4 {
     font-size: 1rem;
 }
 
-h1,
-h4 {
-    color: #333333;
-}
 
 p {
-    font-size: 0.75rem;
+    font-size: 4.267vw;
     color: #999999;
     line-height: 1.5;
     letter-spacing: 0.5px;
+}
+
+
+.cadastrar {
+    padding: 0.6rem 1.2rem;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+
+
+  .cadastrar {
+    padding: 0.6rem 1.2rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    letter-spacing: .05rem;
+    text-transform: capitalize;
+  }
+  
+  .cadastrar:hover {
+    background-color: #0056b3;
+  }
+
+
+
+
+.voltar {
+    padding: 0.6rem 1.2rem;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.voltar:hover {
+    background-color: #218838;
 }
 
 @media (min-width: 768px) {
@@ -47,7 +97,7 @@ p {
     }
 
     h1 {
-        font-size: 24px;
+        font-size: 3.125vw;
     }
 }
 

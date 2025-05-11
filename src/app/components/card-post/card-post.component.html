@@ -1,4 +1,4 @@
-@defer {
+<!-- @defer { -->
 <div class="conteudo-card">
 
   @if (postagems.length > 0) {
@@ -37,14 +37,12 @@
 </div>
 }@else {
 <p>Dados não foram encontrados</p>
-
-<!-- <app-error-page></app-error-page> -->
 <button (click)="recarregarRota()" class="voltar">Voltar</button>
 
 }
 </div>
 
-}
+<!-- }
  @loading (minimum 1ms; after 500ms) {
 <p>Carregando postagems...</p>
-}
+} -->
