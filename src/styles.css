@@ -11,21 +11,22 @@ root {
 }
 
 body {
-    width: 100%;
-    min-height: 100vh;
+    /* max-width: 100%; */
+    /* min-height: 100vh; */
     background-color: #f9f9f9;
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; 
+    padding: 1rem; */
 }
 
 html {
     font-family: "Open Sans",
         sans-serif;
     font-size: 16px;
-    /* color: #333333; */
+    /* color: #333333;
     letter-spacing: .03em;
-    word-spacing: .1em;
+    word-spacing: .1em; */
 
 }
 
@@ -46,20 +47,7 @@ p {
     letter-spacing: 0.5px;
 }
 
-
 .cadastrar {
-    padding: 0.6rem 1.2rem;
-    background-color: #28a745;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-
-
-  .cadastrar {
     padding: 0.6rem 1.2rem;
     background-color: #007bff;
     color: white;
@@ -68,14 +56,11 @@ p {
     cursor: pointer;
     letter-spacing: .05rem;
     text-transform: capitalize;
-  }
-  
-  .cadastrar:hover {
+}
+
+.cadastrar:hover {
     background-color: #0056b3;
-  }
-
-
-
+}
 
 .voltar {
     padding: 0.6rem 1.2rem;

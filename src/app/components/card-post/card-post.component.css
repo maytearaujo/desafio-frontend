@@ -1,12 +1,22 @@
 .conteudo-card {
-  flex-direction: column;
+  /* flex-direction: column; */
+  display: flex;
+  justify-content: center;
+
+  width: 100vw;
 }
 
+.cards-btn-menu {
+  width: 90%;
+}
 
 .titulo-card {
-  width: 100%;
   text-align: center;
   margin-bottom: 1rem;
+
+  justify-content: center;
+  border: solid brown;
+
 }
 
 .titulo-card p {
@@ -24,28 +34,34 @@
 
 .cards {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
   gap: 2rem;
 }
 
 .card {
-  width: 100%;
-  height: 55vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  border: 1px solid #ccc;
-  border-radius: .6rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-height: 30vh;
+  border-radius: 0.6rem .6rem 0 0;
 
-  gap: 2rem;
 }
 
+.borda-card {
+  min-width: 100%;
+  height: 100%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  justify-content: end;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.6rem .6rem 0 0;
+
+}
 
 .card img {
-  min-width: 100%;
-  height: 60%;
+  width: 100%;
+  height: 50%;
   align-items: center;
   margin: 0 auto;
   border-radius: 0.6rem .6rem 0 0;

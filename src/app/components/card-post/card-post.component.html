@@ -1,5 +1,6 @@
-<!-- @defer { -->
 <div class="conteudo-card">
+<!-- @defer { -->
+<div class="cards-btn-menu">
 
   @if (postagems.length > 0) {
   <div class="titulo-card">
@@ -12,12 +13,15 @@
       <div class="cards">
         @for (postagem of postagemsFiltrados; track $index) {
         <div class="card">
-          <img [src]="postagem.image" alt="Foto da Notícia">
-          <div class="textos-post">
-            <h4>{{ postagem.title }}</h4>
-            <app-maismenos [text]=postagem.body [wordLimit]="80" [id]=postagem.id!></app-maismenos>
-          </div>
+          <div class="borda-card">
 
+
+            <img [src]="postagem.image" alt="Foto da Notícia">
+            <div class="textos-post">
+              <h4>{{ postagem.title }}</h4>
+              <app-maismenos [text]=postagem.body [wordLimit]="80" [id]=postagem.id!></app-maismenos>
+            </div>
+          </div>
 
           <!-- <div class="botoes">
             <button>Editar</button>
@@ -46,3 +50,4 @@
  @loading (minimum 1ms; after 500ms) {
 <p>Carregando postagems...</p>
 } -->
+</div>
