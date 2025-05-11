@@ -1,4 +1,86 @@
 .conteudo-card {
+  flex-direction: column;
+  /* flex-wrap: wrap; */
+  /* align-items: center; */
+  /* justify-content: space-around; */
+  /* gap: 1rem */
+}
+
+
+.titulo-card {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.titulo-card p {
+  font-size: .8rem;
+}
+
+.cards-btnVerMais {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 2rem;
+}
+
+.card {
+  width: 100%;
+  height: 28vh;
+  display: flex;
+  flex-direction: column;
+  /* flex-wrap: wrap; */
+  justify-content: space-around;
+  border: 1px solid #ccc;
+  border-radius: .6rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+  /* overflow: hidden; */
+  padding-bottom: 1rem;
+}
+
+
+.card img {
+  min-width: 100%;
+  height: 60%;
+  align-items: center;
+  margin: 0 auto;
+  border-radius: 0.6rem .6rem 0 0;
+}
+
+.textos-post {
+  padding: 1rem;
+}
+
+.ver-mais {
+  padding: 0.5rem 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.ver-mais-container {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.ver-mais:hover {
+  background-color: #0056b3;
+}
+
+/*  -- FIM DO MOBILE FIRST */
+/* 
+.conteudo-card {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -20,7 +102,6 @@
 .cards-btnVerMais {
   display: flex;
   flex-direction: column;
-  /* flex-wrap: wrap; */
   align-items: center;
   gap: 1rem;
 
@@ -61,11 +142,6 @@ img {
   padding: 1rem;
 }
 
-.titulo-post {
-  font-weight: bold;
-  text-align: center;
-}
-
 .botoes {
   display: flex;
   justify-content: space-between;
@@ -77,31 +153,37 @@ img {
   border-radius: .5rem;
 }
 
-.lerMais {
-  text-align: left;
-  width: 100%;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.ver-mais-container {
-  text-align: center;
-  margin-top: 1rem;
-}
-
-.ver-mais {
-  padding: 0.5rem 1rem;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-.ver-mais:hover {
-  background-color: #0056b3;
-}
 
 .menu-lateral {
   width: 35%;
+} */
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  p {
+    font-weight: 1rem;
+  }
+
+  .cards-menu {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 42px;
+  }
+
+  p {
+    font-weight: 1rem;
+  }
+
+  .cards-menu {
+    display: flex;
+    flex-direction: row;
+  }
 }

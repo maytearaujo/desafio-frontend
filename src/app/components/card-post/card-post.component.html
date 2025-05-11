@@ -1,7 +1,8 @@
+@defer {
 <div class="conteudo-card">
+
   @if (postagems.length > 0) {
   <div class="titulo-card">
-    <!-- <h1>{{ termoBusca }} ? Exibindo resultado de busca por "{{ termoBusca }}" : Exibindo notícias</h1> -->
     <h1>{{ termoBusca ? 'Exibindo resultado de busca por "' + termoBusca + '"' : 'Exibindo resultado de busca' }}</h1>
 
     <p>Encontramos um total de {{ postagems.length }} resultados para sua busca</p>
@@ -9,21 +10,14 @@
   <div class="cards-menu">
     <div class="cards-btnVerMais">
       <div class="cards">
-        <!-- @for (postagem of postagems; track $index) { -->
         @for (postagem of postagemsFiltrados; track $index) {
         <div class="card">
           <img [src]="postagem.image" alt="Foto da Notícia">
           <div class="textos-post">
-            <div class="titulo-post">{{ postagem.title }}</div>
-            <!-- <div class="corpo-post"> {{ postagem.body }}</div> FUNCIONANDO CORRETAMENTE -->
-            <!-- <div class="corpo-post">  -->
-            <app-maismenos [text]=postagem.body [wordLimit]="80" [id]=postagem.id! class="corpo-post"></app-maismenos>
-
-
-            <!-- </div> -->
+            <h4>{{ postagem.title }}</h4>
+            <app-maismenos [text]=postagem.body [wordLimit]="80" [id]=postagem.id!></app-maismenos>
           </div>
-          <!-- <div class="lerMais"> -->
-          <!-- <a [routerLink]="['/detalhes', postagem.id]" class="lerMais">Ler Mais</a> -->
+
 
           <!-- <div class="botoes">
             <button>Editar</button>
@@ -38,14 +32,19 @@
     }
   </div>
 
-  <!-- <app-menu-lateral (buscaChange)="search($event)" class="menu-lateral"></app-menu-lateral> -->
   <app-menu-lateral (input)="search($event)" class="menu-lateral"></app-menu-lateral>
 
-  <!-- <input type="text" placeholder="Digite sua pesquisa" (input)="search($event)"> -->
 </div>
 }@else {
 <p>Dados não foram encontrados</p>
-<a [routerLink]="['/home']" class="voltar">Voltar</a>
-}
 
+<!-- <app-error-page></app-error-page> -->
+<button (click)="recarregarRota()" class="voltar">Voltar</button>
+
+}
 </div>
+
+}
+ @loading (minimum 1ms; after 500ms) {
+<p>Carregando postagems...</p>
+}

@@ -1,18 +1,3 @@
-<!-- <span *ngIf="text.length <= wordLimit">
-  {{ text }}
-</span>
-
-<span *ngIf="text.length > wordLimit && !showMore">
-  {{ text.substring(0, wordLimit) }}...
-  <span (click)="showMore = true" style="color: blue; cursor: pointer;">Leia Mais</span>
-</span>
-
-<span *ngIf="text.length > wordLimit && showMore">
-  {{ text }}
-  <span (click)="showMore = false" style="color: blue; cursor: pointer;">Leia Menos</span>
-</span> -->
-
-
 @if (text.length <= wordLimit) {
   <span>{{ text }}</span>
 }

@@ -5,9 +5,9 @@ import { DetalhesComponent } from './pages/postagem/detalhes/detalhes.component'
 import { ErrorPageComponent } from './pages/error-page/error-page.component';
 
 export const routes: Routes = [
-  { path: '', component: HomeComponent },
-  // { path: '/', component: HomeComponent },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: 'home', component: HomeComponent },
   { path: 'cadastro', component: CadastroComponent },
   { path: 'detalhes/:id', component: DetalhesComponent },
-  // { path: '**', component: ErrorPageComponent }
+  { path: '**', component: ErrorPageComponent },
 ];

@@ -1,16 +1,15 @@
 import { Component, OnInit, EventEmitter } from '@angular/core';
 import { Postagem } from '../../model/postagem.model';
 import { PostagemService } from '../../services/postagem.service';
-import { RouterModule } from '@angular/router';
+import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { MaismenosComponent } from '../maismenos/maismenos.component';
 import { MenuLateralComponent } from '../menu-lateral/menu-lateral.component';
-import { HomeComponent } from '../../pages/home/home.component';
-import { ErrorPageComponent } from "../../pages/error-page/error-page.component";
+import { ErrorPageComponent } from '../../pages/error-page/error-page.component';
 
 @Component({
   selector: 'app-card-post',
   standalone: true,
-  imports: [RouterModule, MaismenosComponent, MenuLateralComponent, HomeComponent, ErrorPageComponent],
+  imports: [RouterModule, MaismenosComponent, MenuLateralComponent,ErrorPageComponent],
   templateUrl: './card-post.component.html',
   styleUrl: './card-post.component.css',
 })
@@ -30,7 +29,11 @@ export class CardPostComponent implements OnInit {
     this.quantidadeExibida += 4;
   }
 
-  constructor(private servicePostagem: PostagemService) {}
+  constructor(
+    private servicePostagem: PostagemService,
+    private router: Router,
+    private route: ActivatedRoute
+  ) {}
 
   ngOnInit(): void {
     this.servicePostagem.getPostagens().subscribe((response) => {
@@ -48,16 +51,21 @@ export class CardPostComponent implements OnInit {
     });
   }
 
-  search(event:Event){
+  search(event: Event) {
     const target = event.target as HTMLInputElement;
     const value = target.value.toLowerCase();
 
-    this.termoBusca = target.value; 
+    this.termoBusca = target.value;
 
-    this.postagems = this.postagemsGeral.filter(postagem => {
-      return postagem.title.toLowerCase().includes(value);
-      
-    })
+    this.postagems = this.postagemsGeral.filter((postagem) => {
+      return (
+        postagem.title.toLowerCase().includes(value) ||
+        postagem.body.toLowerCase().includes(value)
+      );
+    });
+  }
 
+  recarregarRota() {
+    window.location.reload();
   }
 }
