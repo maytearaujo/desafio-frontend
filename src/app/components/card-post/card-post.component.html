@@ -1,5 +1,4 @@
 <div class="conteudo-card">
-<!-- @defer { -->
 <div class="cards-btn-menu">
 
   @if (postagems.length > 0) {
@@ -20,11 +19,6 @@
               <app-maismenos [text]=postagem.body [wordLimit]="80" [id]=postagem.id!></app-maismenos>
             </div>
           </div>
-
-          <!-- <div class="botoes">
-            <button class="btn cadastrar">Editar</button>
-            <button (click)="deletar(postagem.id!)" classs="btn">Excluir</button>
-          </div> -->
         </div>
         }
       </div>
@@ -43,9 +37,4 @@
 
 }
 </div>
-
-<!-- }
- @loading (minimum 1ms; after 500ms) {
-<p>Carregando postagems...</p>
-} -->
 </div>

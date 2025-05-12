@@ -17,7 +17,8 @@ body {
 html {
     font-family: "Open Sans",
         sans-serif;
-    color:  #333333;;
+    color: #333333;
+    ;
 }
 
 
@@ -25,17 +26,25 @@ p {
     color: #999999;
 }
 
+body {
+    font-size: 1rem;
+    /* 16px */
+}
+
 h1 {
-    font-size: clamp(24px, 5vw, 48px);
+    font-size: 1.875rem;
+    /* 30px */
 }
 
 h4 {
-    font-size: clamp(16px, 2.5vw, 24px);
+    font-size: 1.125rem;
+    /* 18px */
 }
 
 p,
 a {
-    font-size: clamp(14px, 2vw, 18px);
+    font-size: 1rem;
+    /* 16px */
 }
 
 
@@ -74,9 +83,34 @@ a {
 }
 
 @media (min-width: 768px) {
-   
+    h1 {
+        font-size: 2.25rem;
+        /* 36px */
+    }
+
+    h4 {
+        font-size: 1.25rem;
+        /* 20px */
+    }
+
+    p,
+    a {
+        font-size: 1rem;
+        /* 16px */
+    }
 }
 
+
 @media (min-width: 1024px) {
-   
+    h1 {
+    font-size: 3rem; /* 48px */
+  }
+
+  h4 {
+    font-size: 1.5rem; /* 24px */
+  }
+
+  p, a {
+    font-size: 1.125rem; /* 18px */
+  }
 }
