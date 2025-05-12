@@ -1,6 +1,6 @@
 <div class="formulario">
-    <h1>Cadastro da Postagem</h1>
     <form [formGroup]="postagemForm" (ngSubmit)="submit()" #formDir="ngForm">
+        <h1>Cadastro da Postagem</h1>
         <div class="form-group">
             <label for="title">Título: </label>
             <input type="text" name="title" placeholder="Insira o título da sua postagem" formControlName="title">

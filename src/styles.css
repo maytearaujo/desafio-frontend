@@ -17,32 +17,31 @@ body {
 html {
     font-family: "Open Sans",
         sans-serif;
-    font-size: 16px;
-}
-
-h1 {
-
-    font-size: 5.333vw;
-    /* 20px */
-}
-
-h4,
-input {
-    font-size: 4.267vw;
-    /* 16px */
+    color:  #333333;;
 }
 
 
 p {
-    font-size: 4.267vw;
     color: #999999;
-    line-height: 1.5;
-    letter-spacing: 0.5px;
 }
 
+h1 {
+    font-size: clamp(24px, 5vw, 48px);
+}
+
+h4 {
+    font-size: clamp(16px, 2.5vw, 24px);
+}
+
+p,
+a {
+    font-size: clamp(14px, 2vw, 18px);
+}
+
+
 .btn {
-    width: 32vw;
-    height: 7vh;
+    font-size: clamp(0.875rem, 2.5vw, 1.125rem);
+    padding: clamp(0.5rem, 2vw, 1rem) clamp(1rem, 4vw, 2rem);
     padding: 0.6rem 1.2rem;
     background-color: #28a745;
     color: white;
@@ -75,37 +74,9 @@ p {
 }
 
 @media (min-width: 768px) {
-    html {
-        font-size: 18px;
-    }
-
-    h1 {
-        font-size: 2.865vw;
-        /* 22px */
-    }
-
-    h4,
-    p,
-    input {
-        font-size: 2.344vw;
-        /* 18px */
-    }
+   
 }
 
 @media (min-width: 1024px) {
-    html {
-        font-size: 18px;
-    }
-
-    h1 {
-        font-size: 2.865vw;
-        /* 26px */
-    }
-
-    h4,
-    p,
-    input {
-        font-size: 18px;
-        /* 22px */
-    }
+   
 }

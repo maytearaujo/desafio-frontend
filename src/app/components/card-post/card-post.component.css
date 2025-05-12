@@ -1,5 +1,5 @@
 .conteudo-card {
-  margin-top: 2rem;
+  margin-top: 2vh;
   display: flex;
   justify-content: center;
   width: 100vw;
@@ -14,10 +14,6 @@
   margin-bottom: 1rem;
 
   justify-content: center;
-}
-
-.titulo-card p {
-  font-size: .8rem;
 }
 
 .cards-btnVerMais {
@@ -40,25 +36,22 @@
 .card {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   width: 100%;
-  max-height: 30vh;
+height: 25vh;
   border-radius: 0.6rem .6rem 0 0;
 
 }
 
 .borda-card {
-  min-width: 100%;
+  max-width: 100%;
   height: 100%;
-  /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); */
   justify-content: end;
-  width: 100%;
-  height: 100%;
   border-radius: 0.6rem .6rem 0 0;
 
 }
 
 .card img {
   width: 100%;
-  height: 50%;
+  height: 40%;
   align-items: center;
   margin: 0 auto;
   border-radius: 0.6rem .6rem 0 0;
@@ -67,116 +60,8 @@
 .textos-post {
   padding: 1rem;
 }
-
-.ver-mais {
-  padding: 0.5rem 1rem;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-.ver-mais-container {
-  text-align: center;
-  margin-top: 1rem;
-}
-
-.ver-mais:hover {
-  background-color: #0056b3;
-}
-
-/*  -- FIM DO MOBILE FIRST */
-/* 
-.conteudo-card {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-around;
-  gap: 1rem
-}
-
-.titulo-card {
-  width: 100%;
-  text-align: center;
-}
-
-.cards-menu {
-  display: flex;
-  flex-direction: row;
-}
-
-.cards-btnVerMais {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-
-
-}
-
-.cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  gap: 1rem;
-}
-
-.card {
-  width: 30rem;
-  height: 25rem;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  border: 1px solid #ccc;
-  border-radius: .6rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-
-  overflow: hidden;
-  padding-bottom: 1rem;
-}
-
-img {
-  min-width: 100%;
-  height: 60%;
-  align-items: center;
-  margin: 0 auto;
-  border-radius: 0.6rem .6rem 0 0;
-}
-
-.textos-post {
-  padding: 1rem;
-}
-
-.botoes {
-  display: flex;
-  justify-content: space-between;
-}
-
-.botoes button {
-  width: 8rem;
-  height: 2rem;
-  border-radius: .5rem;
-}
-
-
-.menu-lateral {
-  width: 35%;
-} */
-
-
 
 @media (min-width: 768px) {
-  h1 {
-    font-size: 24px;
-  }
-
-  p {
-    font-weight: 1rem;
-  }
-
   .cards-menu {
     display: flex;
     flex-direction: row;
@@ -203,25 +88,13 @@ img {
     width: 60%;
   }
 
-  .btn {
-    height: 12vh;
-  }
-
 }
 
 @media (min-width: 1024px) {
-  h1 {
-    font-size: 42px;
-  }
-
-  p {
-    font-weight: 1rem;
-  }
-
   .cards-btn-menu {
-  width: 100%;
-}
- 
+    width: 100%;
+  }
+
   .cards-menu {
     display: flex;
     flex-direction: row;
@@ -230,7 +103,7 @@ img {
     align-items: start;
     gap: 1rem;
     margin: 0 1rem;
-  } 
+  }
 
   .cards-btnVerMais {
     display: flex;
@@ -238,13 +111,9 @@ img {
   }
 
   .cards {
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* flex-wrap: wrap; */
     justify-content: space-around;
     gap: 1rem;
     width: 100%;
-    /* height: 50%; */
   }
 
   .card {
