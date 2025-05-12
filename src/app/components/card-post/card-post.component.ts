@@ -9,7 +9,7 @@ import { ErrorPageComponent } from '../../pages/error-page/error-page.component'
 @Component({
   selector: 'app-card-post',
   standalone: true,
-  imports: [RouterModule, MaismenosComponent, MenuLateralComponent,ErrorPageComponent],
+  imports: [RouterModule, MaismenosComponent, MenuLateralComponent],
   templateUrl: './card-post.component.html',
   styleUrl: './card-post.component.css',
 })

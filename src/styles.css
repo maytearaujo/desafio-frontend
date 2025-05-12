@@ -11,32 +11,25 @@ root {
 }
 
 body {
-    /* max-width: 100%; */
-    /* min-height: 100vh; */
     background-color: #f9f9f9;
-    /* display: flex;
-    justify-content: center;
-    align-items: center; 
-    padding: 1rem; */
 }
 
 html {
     font-family: "Open Sans",
         sans-serif;
     font-size: 16px;
-    /* color: #333333;
-    letter-spacing: .03em;
-    word-spacing: .1em; */
-
 }
 
 h1 {
 
     font-size: 5.333vw;
+    /* 20px */
 }
 
-h4 {
-    font-size: 1rem;
+h4,
+input {
+    font-size: 4.267vw;
+    /* 16px */
 }
 
 
@@ -48,17 +41,7 @@ p {
 }
 
 .btn {
-    /* padding: 0.6rem 1.2rem;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-weight: bold;
-    letter-spacing: .05rem;
-    text-decoration: none;
-    font-size: 1rem; */
-
-    width: 30vw;
+    width: 32vw;
     height: 7vh;
     padding: 0.6rem 1.2rem;
     background-color: #28a745;
@@ -77,8 +60,6 @@ p {
 
 .cadastrar {
     background-color: #007bff;
-
-    /* text-transform: uppercase; */
 }
 
 .cadastrar:hover {
@@ -99,16 +80,32 @@ p {
     }
 
     h1 {
-        font-size: 3.125vw;
+        font-size: 2.865vw;
+        /* 22px */
+    }
+
+    h4,
+    p,
+    input {
+        font-size: 2.344vw;
+        /* 18px */
     }
 }
 
 @media (min-width: 1024px) {
     html {
-        font-size: 32px;
+        font-size: 18px;
     }
 
     h1 {
-        font-size: 42px;
+        font-size: 2.865vw;
+        /* 26px */
+    }
+
+    h4,
+    p,
+    input {
+        font-size: 18px;
+        /* 22px */
     }
 }
