@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Output } from '@angular/core';
-import { FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { Postagem } from '../../../model/postagem.model';
 
@@ -21,13 +21,12 @@ export class FormularioComponent {
     
     this.postagemForm = new FormGroup({
       id: new FormControl(0),
-      title: new FormControl(''),
-      image: new FormControl(''),
-      body:new FormControl(''),
+      title: new FormControl('', [Validators.required, Validators.minLength(3), Validators.maxLength(30)]),
+      image: new FormControl('', [Validators.required]),
+      body:new FormControl('', [Validators.required, Validators.min(3), Validators.maxLength(500)]),
       createdAt: new FormControl('')
     });
   }
-  
 
   submit(){
     this.postagemForm.patchValue({

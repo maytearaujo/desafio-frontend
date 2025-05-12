@@ -1,25 +1,64 @@
-<div class="container">
+<div class="formulario">
     <h1>Cadastro da Postagem</h1>
     <form [formGroup]="postagemForm" (ngSubmit)="submit()" #formDir="ngForm">
         <div class="form-group">
             <label for="title">Título: </label>
             <input type="text" name="title" placeholder="Insira o título da sua postagem" formControlName="title">
+            @if(
+            postagemForm.get('title')?.hasError('required') &&
+            postagemForm.get('title')?.touched
+            ) {
+            <p class="validation-error">O Título é obrigatório</p>
+            }
+            @if(
+            postagemForm.get('title')?.hasError('minlength') &&
+            postagemForm.get('title')?.touched
+            ) {
+            <p class="validation-error">O Título precisar ter no mínimo 3 caracteres</p>
+            }
+            @if(
+            postagemForm.get('title')?.hasError('maxlength') &&
+            postagemForm.get('title')?.touched
+            ) {
+            <p class="validation-error">O Título precisar ter no máximo 30 caractere</p>
+            }
         </div>
 
         <div class="form-group">
             <label for="body">Insira a sua postagem: </label>
-            <textarea name="body" id="" placeholder="Insira a sua postagem" formControlName="body"></textarea>
+            <textarea name="body" placeholder="Insira a sua postagem" formControlName="body"></textarea>
+            @if(
+            postagemForm.get('body')?.hasError('required') && 
+            postagemForm.get('body')?.touched){
+            <p class="validation-error">O texto da postagem é obrigatório</p>
+            }
+            @if(
+            postagemForm.get('body')?.hasError('minlength') &&
+            postagemForm.get('body')?.touched
+            ) {
+            <p class="validation-error">O Título precisar ter no mínimo 3 caracteres</p>
+            }
+            @if(
+            postagemForm.get('body')?.hasError('maxlength') &&
+            postagemForm.get('body')?.touched
+            ) {
+            <p class="validation-error">O Título precisar ter no máximo 500 caractere</p>
+            }
         </div>
 
         <div class="form-group">
             <label for="image">Imagem: </label>
             <input type="text" name="image" placeholder="Insira o endereço da imagem" formControlName="image">
+            @if(
+            postagemForm.get('image')?.hasError('required') && 
+            postagemForm.get('image')?.touched){
+            <p class="validation-error">O endereço da imagem é obrigatório</p>
+            }
         </div>
 
         <div class="form-actions">
-            <button type="submit">Cadastrar</button>
-            <a [routerLink]="['/']" class="voltar">Voltar</a>
+            <button type="submit" class="btn cadastrar" [disabled]="postagemForm.invalid">Cadastrar</button>
+            <a [routerLink]="['/']" class="btn voltar">Voltar</a>
         </div>
-
     </form>
 </div>

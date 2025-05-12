@@ -1,5 +1,5 @@
 .conteudo-card {
-  /* flex-direction: column; */
+margin-top: 2rem;
   display: flex;
   justify-content: center;
 
@@ -15,8 +15,6 @@
   margin-bottom: 1rem;
 
   justify-content: center;
-  border: solid brown;
-
 }
 
 .titulo-card p {

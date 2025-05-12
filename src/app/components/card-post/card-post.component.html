@@ -24,14 +24,14 @@
           </div>
 
           <!-- <div class="botoes">
-            <button>Editar</button>
-            <button (click)="deletar(postagem.id!)">Excluir</button>
+            <button class="btn cadastrar">Editar</button>
+            <button (click)="deletar(postagem.id!)" classs="btn">Excluir</button>
           </div> -->
         </div>
         }
       </div>
       @if (quantidadeExibida < postagems.length) { <div class="ver-mais-container">
-        <button (click)="verMais()" class="ver-mais">Ver mais</button>
+        <button (click)="verMais()" class="ver-mais btn cadastrar">Ver mais</button>
     </div>
     }
   </div>
@@ -41,7 +41,7 @@
 </div>
 }@else {
 <p>Dados não foram encontrados</p>
-<button (click)="recarregarRota()" class="voltar">Voltar</button>
+<button (click)="recarregarRota()" class="btn voltar">Voltar</button>
 
 }
 </div>

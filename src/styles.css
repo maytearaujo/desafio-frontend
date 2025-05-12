@@ -47,22 +47,19 @@ p {
     letter-spacing: 0.5px;
 }
 
-.cadastrar {
-    padding: 0.6rem 1.2rem;
-    background-color: #007bff;
+.btn {
+    /* padding: 0.6rem 1.2rem;
     color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    font-weight: bold;
     letter-spacing: .05rem;
-    text-transform: capitalize;
-}
+    text-decoration: none;
+    font-size: 1rem; */
 
-.cadastrar:hover {
-    background-color: #0056b3;
-}
-
-.voltar {
+    width: 30vw;
+    height: 7vh;
     padding: 0.6rem 1.2rem;
     background-color: #28a745;
     color: white;
@@ -70,6 +67,26 @@ p {
     border-radius: 4px;
     cursor: pointer;
     font-weight: bold;
+    letter-spacing: 0.05rem;
+    text-decoration: none;
+    font-size: 1rem;
+    display: inline-block;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.cadastrar {
+    background-color: #007bff;
+
+    /* text-transform: uppercase; */
+}
+
+.cadastrar:hover {
+    background-color: #0056b3;
+}
+
+.voltar {
+    background-color: #28a745;
 }
 
 .voltar:hover {
