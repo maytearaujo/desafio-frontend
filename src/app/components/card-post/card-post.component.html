@@ -1,40 +1,40 @@
 <div class="conteudo-card">
-<div class="cards-btn-menu">
+  <div class="cards-btn-menu">
 
-  @if (postagems.length > 0) {
-  <div class="titulo-card">
-    <h1>{{ termoBusca ? 'Exibindo resultado de busca por "' + termoBusca + '"' : 'Exibindo resultado de busca' }}</h1>
+    @if (postagems.length > 0) {
+    <div class="titulo-card">
+      <h1>{{ termoBusca ? 'Exibindo resultado de busca por "' + termoBusca + '"' : 'Exibindo resultado de busca' }}</h1>
 
-    <p>Encontramos um total de {{ postagems.length }} resultados para sua busca</p>
-  </div>
-  <div class="cards-menu">
-    <div class="cards-btnVerMais">
-      <div class="cards">
-        @for (postagem of postagemsFiltrados; track $index) {
-        <div class="card">
-          <div class="borda-card">
-            <img [src]="postagem.image" alt="Foto da Notícia">
-            <div class="textos-post">
-              <h4>{{ postagem.title }}</h4>
-              <app-maismenos [text]=postagem.body [wordLimit]="80" [id]=postagem.id!></app-maismenos>
+      <p>Encontramos um total de {{ postagems.length }} resultados para sua busca</p>
+    </div>
+    <div class="cards-menu">
+      <div class="cards-btnVerMais">
+        <div class="cards">
+          @for (postagem of postagemsFiltrados; track $index) {
+          <div class="card">
+            <div class="borda-card">
+              <img class="imagem" [src]="postagem.image" alt="Foto da Notícia">
+              <div class="textos-post">
+                <h4>{{ postagem.title }}</h4>
+                <app-maismenos [text]=postagem.body [wordLimit]="80" [id]=postagem.id!></app-maismenos>
+              </div>
             </div>
           </div>
+          }
         </div>
-        }
+        @if (quantidadeExibida < postagems.length) { <div class="ver-mais-container">
+          <button (click)="verMais()" class="btn cadastrar">Ver mais</button>
       </div>
-      @if (quantidadeExibida < postagems.length) { <div class="ver-mais-container">
-        <button (click)="verMais()" class="btn cadastrar">Ver mais</button>
+      }
     </div>
-    }
+
+    <app-menu-lateral (input)="search($event)" class="menu-lateral"></app-menu-lateral>
+
   </div>
+  }@else {
+  <p>Dados não foram encontrados</p>
+  <button (click)="recarregarRota()" class="btn voltar">Voltar</button>
 
-  <app-menu-lateral (input)="search($event)" class="menu-lateral"></app-menu-lateral>
-
-</div>
-}@else {
-<p>Dados não foram encontrados</p>
-<button (click)="recarregarRota()" class="btn voltar">Voltar</button>
-
-}
+  }
 </div>
 </div>
